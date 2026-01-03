@@ -1,29 +1,29 @@
-import { createTheme } from '@mantine/core';
+import {createTheme} from '@mantine/core';
 
 const bufferGreen = [
-  '#f0fdf4',
-  '#dcfce7',
-  '#bbf7d0',
-  '#86efac',
-  '#4ade80',
-  '#22c55e',
-  '#16a34a',
-  '#15803d',
-  '#166534',
-  '#14532d'
+  'hsl(105 68% 89%)',
+  'hsl(105 67% 82%)',
+  'hsl(105 68% 77%)',
+  'hsl(106 67% 71%)',
+  'hsl(106 60% 66%)',
+  'hsl(105 51% 56%)',
+  'hsl(105 53% 45%)',
+  'hsl(105 54% 35%)',
+  'hsl(109 46% 25%)',
+  'hsl(176 20% 16%)'
 ] as const;
 
 const bufferDark = [
-  '#f7f7f7',
-  '#e3e3e3',
-  '#c8c8c8',
-  '#a4a4a4',
-  '#818181',
-  '#666666',
-  '#515151',
-  '#434343',
-  '#2d2d2d',
-  '#1a1a1a'
+  'hsl(0 0% 97%)',
+  'hsl(0 0% 89%)',
+  'hsl(0 0% 78%)',
+  'hsl(0 0% 64%)',
+  'hsl(0 0% 51%)',
+  'hsl(0 0% 40%)',
+  'hsl(0 0% 32%)',
+  'hsl(0 0% 26%)',
+  'hsl(0 0% 18%)',
+  'hsl(0 0% 10%)'
 ] as const;
 
 export const theme = createTheme({
@@ -38,7 +38,11 @@ export const theme = createTheme({
     sizes: {
       h1: { fontSize: '3.5rem', lineHeight: '1.1', fontWeight: '700' },
       h2: { fontSize: '2.5rem', lineHeight: '1.2', fontWeight: '600' },
-      h3: { fontSize: '1.75rem', lineHeight: '1.3', fontWeight: '600' }
+      h3: { fontSize: '1.75rem', lineHeight: '1.3', fontWeight: '600' },
     }
+  },
+  lineHeights: {
+    md: "1.7rem"
   }
+
 });

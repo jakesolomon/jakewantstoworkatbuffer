@@ -4,31 +4,40 @@ import {
   Group,
   Anchor,
   Grid,
-  Title,
   Text,
   Mark,
   Box,
   Stack,
-  Pill,
-  Divider,
+  Image,
+  useMantineTheme,
 } from '@mantine/core';
+import { Carousel } from '@mantine/carousel';
+import '@mantine/carousel/styles.css';
+import Me from "./assets/me.png";
+import SectionHeader from "./SectionHeader.tsx";
+import WhyJakeSection from "./WhyJakeSection.tsx";
+import "./App.css"
+import JobDescriptionSection from "./JobDescriptionSection.tsx";
 
 function App() {
+
+  const theme = useMantineTheme();
+
   return (
-    <AppShell header={{ height: 60 }}>
+    <AppShell header={{height: 60}}>
       <AppShell.Header>
         <Container size="lg" h="100%">
           <Group h="100%" justify="flex-end" gap="xl">
-            <Anchor href="#why-buffer" c="dark" underline="never" fw={500}>
+            <Anchor href="#why-buffer" c="dark">
               Why Buffer?
             </Anchor>
-            <Anchor href="#experience" c="dark" underline="never" fw={500}>
+            <Anchor href="#experience" c="dark">
               Experience
             </Anchor>
-            <Anchor href="#highlights" c="dark" underline="never" fw={500}>
+            <Anchor href="#highlights" c="dark">
               Highlights
             </Anchor>
-            <Anchor href="#application" c="dark" underline="never" fw={500}>
+            <Anchor href="#application" c="dark">
               Application
             </Anchor>
           </Group>
@@ -37,256 +46,242 @@ function App() {
 
       <AppShell.Main>
         {/* Hero Section */}
-        <Box bg="white" py={80}>
+        <Box bg={theme.colors.gray[1]}>
           <Container size="lg">
             <Grid gutter="xl">
-              <Grid.Col span={{ base: 12, md: 6 }}>
-                <Stack gap="lg">
-                  <Title order={1} size="3.5rem" lh={1.1}>
-                    I'm Jake,
-                    <br />
-                    <Mark color="buffer-green.2">a product-minded</Mark>
-                    <br />
-                    FE Engineer with <Mark color="buffer-green.2">EM goals.</Mark>
-                  </Title>
-                  <Group gap="sm">
-                    <Anchor href="#" c="dark" underline="always">
+              <Grid.Col span={{base: 12, md: 6}}>
+                <Box pt="20vh">
+                  <Text size="3.5rem" lh={1.15} fw={700} pb={0}>I'm Jake,</Text>
+                  <Text size="3.5rem" lh={1.15} fw={300} pt={0}>
+                    <Mark color="buffer-green.2">a product-minded <br/>FE Engineer</Mark>{' '}
+                    focused on <em>growth.</em>
+                  </Text>
+                  <Group gap="sm" pt="lg">
+                    <Anchor href="#" c="dark" fw="bold">
                       LinkedIn
                     </Anchor>
-                    <Text>|</Text>
-                    <Anchor href="#" c="dark" underline="always">
+                    <Text size="2rem" fw={100} pb="6px">|</Text>
+                    <Anchor href="#" c="dark" fw="bold">
                       Resume
                     </Anchor>
                   </Group>
-                </Stack>
-              </Grid.Col>
-              <Grid.Col span={{ base: 12, md: 6 }}>
-                <Box
-                  h={400}
-                  bg="blue.1"
-                  style={{
-                    borderRadius: '8px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                  }}
-                >
-                  <Text c="dimmed">Photo placeholder</Text>
                 </Box>
+              </Grid.Col>
+              <Grid.Col span={{base: 12, md: 6}} mb={0} pb={0}>
+                <Image src={Me} w="500px" h="650px" style={{position: "absolute", right: 0}}/>
+                {/*Spacing for absolutely positioned image*/}
+                <Box h="650px"/>
               </Grid.Col>
             </Grid>
           </Container>
         </Box>
 
-        {/* Buffer Section */}
-        <Box id="why-buffer" bg="buffer-dark.8" py={60}>
-          <Container size="lg">
-            <Stack gap="md">
-              <Title order={2} c="buffer-green.3" size="3rem">
-                Let's talk about <span style={{ fontSize: '4rem', color: '#4ade80' }}>Buffer</span>
-              </Title>
-              <Text c="white" size="md" maw={800}>
-                What attracts me about Buffer isn't just the product, it's the people. Every team member I've looked up has
-                side projects, creative outlet backgrounds, and blogs.
-              </Text>
-              <Text c="white" size="md" maw={800}>
-                Buffer doesn't just allow people to be human, it's built the conditions for a vibrant community right into the
-                foundation of the organization. (It's one thing to talk about four-day work weeks and unlimited PTO, but I
-                also love many companies publishing transparent reports right on their website.)
-              </Text>
-              <Text c="white" size="md" maw={800}>
-                In 2026 I plan on sharpening my leadership skills and product instincts, and Buffer is where I'd like to do it — in
-                an environment that values experimentation, and surrounded by people with diverse backgrounds.
-              </Text>
-            </Stack>
-          </Container>
-        </Box>
+        <Box h="70px"/>
+        <SectionHeader title="Senior Engineer — Growth Marketing"/>
+
+        <JobDescriptionSection />
+        <Box h="50px"/>
 
         {/* Scrolling Banner */}
-        <Box bg="buffer-dark.9" py={40}>
-          <Container size="100%" px={0} style={{ overflow: 'hidden' }}>
+        <Box bg="buffer-green.2" py="md">
+          <Container size="100%" px={0} style={{overflow: 'hidden'}}>
             <Box
               style={{
                 display: 'flex',
                 whiteSpace: 'nowrap',
-                animation: 'scroll 20s linear infinite',
+                animation: 'scroll 15s linear infinite',
               }}
             >
-              <Text
-                size="2rem"
-                fw={600}
-                c="buffer-green.4"
-                style={{ paddingRight: '4rem' }}
-              >
-                years development experience — leadership responsibility in previous role — perfect
-              </Text>
-              <Text
-                size="2rem"
-                fw={600}
-                c="buffer-green.4"
-                style={{ paddingRight: '4rem' }}
-              >
-                years development experience — leadership responsibility in previous role — perfect
-              </Text>
+              {Array.from({ length: 10 }).map((_, i) => (
+                <Text
+                  key={i}
+                  size="1.6rem"
+                  fw={600}
+                  c="buffer-green.9"
+                  style={{paddingRight: '0.4rem'}}
+                >
+                  5 years development experience — leadership responsibility in previous role — perfect match of tech
+                  stack to experience — great attitude —
+                </Text>
+              ))}
             </Box>
           </Container>
         </Box>
 
         {/* Experience Section */}
-        <Box id="experience" bg="buffer-dark.8" py={80}>
-          <Container size="lg">
-            <Grid>
-              <Grid.Col span={12}>
-                <Stack gap="md">
-                  <Title order={2} c="white" size="2.5rem">
-                    aPriori Technologies
-                  </Title>
-                  <Text c="buffer-green.4" size="lg" fw={500}>
-                    Software Engineer
-                  </Text>
-                  <Text c="gray.5" size="md">
-                    2021-2024
-                  </Text>
-                  <Text c="white" size="md" maw={800}>
-                    I worked on the company's flagship cloud product, collaborating with five backend teams to deliver user-
-                    facing features with measurable impact. I was tapped in for my scrum master to lead Agile ceremonies, and led my
-                    team's quarterly planning sessions with autonomy in stakeholder interactions, scoped in dependency, reports to leadership and department of 100+,
-                    and reduced project estimate slips to 15% from over 160%.
-                  </Text>
-                  <Group gap="xs" mt="md">
-                    <Box
-                      w={8}
-                      h={8}
-                      bg="buffer-green.5"
-                      style={{ borderRadius: '50%' }}
-                    />
-                    <Box
-                      w={8}
-                      h={8}
-                      bg="gray.6"
-                      style={{ borderRadius: '50%' }}
-                    />
-                    <Box
-                      w={8}
-                      h={8}
-                      bg="gray.6"
-                      style={{ borderRadius: '50%' }}
-                    />
-                  </Group>
-                </Stack>
-              </Grid.Col>
-            </Grid>
+        <Box id="experience" bg="buffer-green.9" pt="100" pb="60">
+          <Container size="xl">
+            <Carousel
+              controlsOffset="sm"
+              withIndicators
+              emblaOptions={{
+                loop: true
+              }}
+            >
+              <Carousel.Slide>
+                <Container size="md" mb="50">
+                  <Grid>
+                    <Grid.Col span={{base: 12, md: 4}}>
+                      <Stack gap={0}>
+                        <Text c="white" size="2.5rem" fw="900">
+                          The Growing Guide
+                        </Text>
+                        <Text c="buffer-green.1" size="lg" fw={500}>
+                          Founder
+                        </Text>
+                        <Text c="gray.1" size="md">
+                          <em>2025–Present</em>
+                        </Text>
+                      </Stack>
+                    </Grid.Col>
+                    <Grid.Col span={{base: 12, md: 8}}>
+                      <Stack gap="md">
+                        <Text c="white" size="md" maw={800} lh="lg">
+                          I built a personalized gardening planner that generates climate-specific, month-to-month tasks using a custom scheduling algorithm and AI integration. I designed and shipped the full experience—responsive frontend, backend, dynamic PDF generation pipeline, and digital fulfillment. Over 300 registered free-tier users with a 34% visitor-to-signup conversion rate.
+                        </Text>
+                      </Stack>
+                    </Grid.Col>
+                  </Grid>
+                </Container>
+              </Carousel.Slide>
+              <Carousel.Slide>
+                <Container size="md" mb="50">
+                  <Grid>
+                    <Grid.Col span={{base: 12, md: 4}}>
+                      <Stack gap={0}>
+                        <Text c="white" size="2.5rem" fw="900">
+                          aPriori Technologies
+                        </Text>
+                        <Text c="buffer-green.1" size="lg" fw={500}>
+                          Software Engineer
+                        </Text>
+                        <Text c="gray.1" size="md">
+                          <em>2021-2024</em>
+                        </Text>
+                      </Stack>
+                    </Grid.Col>
+                    <Grid.Col span={{base: 12, md: 8}}>
+                      <Stack gap="md">
+                        <Text c="white" size="md" maw={800} lh="lg">
+                          I worked on the company’s flagship cloud product, collaborating with five backend teams to deliver user-facing features with real product impact. I also stepped in for my scrum master to lead Agile ceremonies, and led my team's quarterly planning exercises to resolve cross-team dependency, report to leadership and department of 100+, and reduce project estimate inflation to 15% from over 100%.
+                        </Text>
+                      </Stack>
+                    </Grid.Col>
+                  </Grid>
+                </Container>
+              </Carousel.Slide>
+            </Carousel>
           </Container>
         </Box>
 
         {/* Why Jake Section */}
         <Box id="highlights" bg="white" py={80}>
-          <Container size="lg">
-            <Stack gap="xl" align="center">
-              <Title order={2} size="2.5rem" ta="center">
-                Why <Mark color="buffer-green.2">Jake</Mark> is a <Mark color="buffer-green.2">Great...</Mark>
-              </Title>
-              <Group gap="md">
-                <Pill size="lg" bg="white" c="dark" style={{ border: '2px solid #000' }}>
-                  Engineer
-                </Pill>
-                <Pill size="lg" bg="white" c="dark" style={{ border: '2px solid #000' }}>
-                  Leader
-                </Pill>
-                <Pill size="lg" bg="white" c="dark" style={{ border: '2px solid #000' }}>
-                  Creator
-                </Pill>
-              </Group>
-            </Stack>
-          </Container>
+          <WhyJakeSection/>
         </Box>
 
-        {/* Tech Stack Table */}
-        <Box bg="white" py={60}>
-          <Container size="lg">
-            <Grid>
-              <Grid.Col span={{ base: 12, md: 6 }}>
-                <Stack gap="lg">
-                  <Title order={3} size="1.25rem" fw={600}>
-                    Buffer Tech Stack
-                  </Title>
-                  <Stack gap="md">
-                    <Text fw={500}>React + TypeScript</Text>
-                    <Text fw={500}>Internal Design System</Text>
-                    <Text fw={500}>Automated Tests</Text>
-                    <Text fw={500}>NodeJS + TypeScript Backend</Text>
-                    <Text fw={500}>MongoDB</Text>
-                    <Text fw={500}>LLM Integrations</Text>
-                    <Text fw={500}>Feature Flags</Text>
-                    <Text fw={500}>AWS</Text>
-                  </Stack>
-                </Stack>
-              </Grid.Col>
-              <Grid.Col span={{ base: 12, md: 6 }}>
-                <Stack gap="lg">
-                  <Title order={3} size="1.25rem" fw={600}>
-                    Experience
-                  </Title>
-                  <Stack gap="md">
-                    <Text>5 years building production React/TS apps, including high-visibility enterprise features.</Text>
-                    <Text>Extended aPriori's design system components in Storybook using advanced CSS.</Text>
-                    <Text>Wrote end-to-end tests in React Testing Library and Jest for all aPriori FE components, as well as JUnit tests for Java backend.</Text>
-                    <Text>All backend functions for The Growing Guide were built on AWS Amplify, a TypeScript-based backend system that deploys with AWS Lambda functions.</Text>
-                    <Text>Interfaced with MongoDB in aPriori backend workflows to manage non-relational data.</Text>
-                    <Text>Built multiple LLM integrations in The Growing Guide, rigorously tested prompts, leveraged structured outputs to parse responses into reusable data structures.</Text>
-                    <Text>Used feature flags to manage rollouts, testing, and staged releases in production environments.</Text>
-                    <Text>Housed The Growing Guide on AWS (Lambda, SQS, SNS, used other services to manage our deploy workflows (S3, SQS).</Text>
-                  </Stack>
-                </Stack>
-              </Grid.Col>
-            </Grid>
-          </Container>
-        </Box>
-
-        <Divider my={0} />
+        {/* Application Header */}
+        <Container size="lg" >
+          <Box py="xl" bg="buffer-green.9" w="50vw" style={{position: "absolute", left: 0, zIndex: -1}}>
+            <Text size="5rem" c="buffer-green.2">
+              {'\u200B'}
+            </Text>
+          </Box>
+          <Stack bg="buffer-green.9" py="xl">
+            <Text size="3rem" fw="900"  c="buffer-green.2">
+              Application
+            </Text>
+            <Text size="1rem" fw="900" c="buffer-green.2">
+              <em>Senior Engineer — Growth Marketing</em>
+            </Text>
+          </Stack>
+        </Container>
 
         {/* Application Section */}
-        <Box id="application" bg="white" py={80}>
-          <Container size="lg">
-            <Stack gap="xl">
-              <Title order={1} size="4rem" fw={700}>
-                Application
-              </Title>
-              <Text size="lg">
-                Great! I've been actively working at <Anchor href="#">jakewl.dev/buffer</Anchor> for the first application I've sent to any
-                company in almost a year.
+        <Box id="application" bg="white" py="md">
+          <Container size="sm">
+            <Stack gap="lg">
+
+              <Text size="lg" fw="900" mt="lg" >
+                Why would you like to work at buffer?
               </Text>
-              <Text size="lg">
-                I realize a company can claim to be people-centric and progressive, but more often than not it's
-                a compliance token, befuddled from I looked up bare-covered digital footprints, showing and technical
-                solo projects, podcasts, creative outlets, and professional accomplishments.
+              <Text>
+                For the last year I’ve been happily working at a <Anchor target="_blank" href="https://www.barrettsmillfarm.com/">small organic farm in my hometown</Anchor>—I’m not lying when I say this is the first application I’ve sent to a tech company in almost a year.
               </Text>
-              <Text size="lg">
-                As a passionate creative in music and videography myself, I genuinely want to get to know everyone, and I'm very
-                interested in buffer because it's full of vibrant community.
+              <Text>
+                Any trendy company can claim to be people-centric and progressive, but I’ve never seen a four day work week and transparent pay right on the website. I’ve heard the term “unlimited PTO” thrown around, but I’ve never seen a report on the amount of time off taken. And it shows: all the employees (ahem, buferroos) that I looked up have exciting digital footprints, showing off technical side projects, podcasts, blogs, and more.
               </Text>
-              <Text size="lg" fw={600} mt="xl">
-                Tell me about a time you had to align engineering priorities with product goals.
+              <Text>
+                As a passionate creative in music and videography myself, I genuinely want to get to know everyone, and I’m excited about a company culture that fosters this kind of vibrant community.
               </Text>
-              <Text size="lg">
-                I'd like product-skilled engineers for a massive ER, but instead we wrote a custom query builder (kind of like Mongo aggregates) with a user-friendly UI. This let us get to market in about a year.
+
+              <Text size="lg" fw="900" mt="lg">
+                Tell us about a time you had to align engineering priorities with product goals.
+              </Text>
+              <Text>
+                TLDR: Product asked engineers for a massive lift, but instead we wrote a simple page redirect and everyone was happy.
+              </Text>
+              <Text>
+                In an extremely common user workflow in aPriori's flagship product, our user would begin by uploading a CAD file and then have no indication when it finished processing in order to proceed. Users and product experts giving demos developed a habit of clicking “refresh” over and over after file upload—we even heard stories that some users expected the page to auto refresh when the file was done processing, and simply wasted away staring at a “processing” state, eventually assuming the product was broken.
+              </Text>
+              <Text>
+                UX designers quietly sobbed in the background. Product asked repeatedly why engineers couldn't make the page auto-update when the file upload was complete—engineers insisted it required websockets, major refactors, or backend polling that no one wanted to own. (To be fair, this issue was one of many caused by the architectural complexity of being halfway through a migration from on-prem to cloud-based computing.)
+              </Text>
+              <Text>
+                Instead of trying to push the “ideal” solution, <b>I partnered with my PM to step back and align on the actual goal: reduce user frustration and demo embarrassment.</b> Once we reframed the ask, we found a much simpler path. We agreed to redirect users after upload to a page that already auto-refreshed, and to add a timestamp to the old view so users understood it was static.
+              </Text>
+              <Text>
+                It took a few hours to implement and immediately eliminated the biggest pain points. What I learned was that alignment isn’t always about the perfect technical answer. It’s about clarifying the real product need and finding the smallest viable solution everyone can agree on.
+              </Text>
+
+              <Text size="lg" fw="900" mt="lg">
+                Tell us about a growth-focused feature or optimization you led and shipped recently.
+              </Text>
+              <Text>
+                To improve conversion for my B2C SaaS product <Anchor target="_blank" href="https://thegrowingguide.com/">The Growing Guide</Anchor>, I ran a growth experiment focused on two key metrics: email opt-in rate and free-to-paid conversion. I noticed unusually high opt-ins but low conversion, and our working theory was that the free tier delivered too much value up front, removing the incentive to upgrade.
+              </Text>
+              <Text>
+                Because the gardening season creates a short acquisition window (around February through May), I needed a rapid test. I spun up a /v2 version of the site, redirected ad traffic to it, and rebuilt the workflow so the sales page acted as a paywall before users could access the free planner. I also redesigned the landing page into a build-to-sell flow with more marketing content and multiple CTAs to warm users before asking for purchase.
+              </Text>
+              <Text>
+                The experiment shipped in under a week, and the results came in fast: conversion didn’t improve. The insight was clear: <b>users won’t value the planner until they get to actually try it out.</b>
+              </Text>
+              <Text>
+                This led to a new theory: the free product (a planting algorithm optimized for efficiency) and paid product (a dynamically generated gardening guide) create value on totally different timeframes and don’t belong in the same sales funnel. So I’ve paused the paid product and refocused on developing what users truly want: the planner. The long-term plan is to strengthen core value and later introduce a feature-limited free tier that still allows meaningful engagement.
+              </Text>
+
+              <Text size="lg" fw="900" mt="lg">
+                Tell us about your personal experience with content creation and social media.
+              </Text>
+              <Text>
+                I’m a gigging musician and aspiring videographer, but most of my content planning so far has been purely manual—spreadsheets of dates, group chats coordinating posts, and lots of late-night editing. It worked well enough (one band even landed a three-week tour last October), but the constant back-and-forth for edits and approvals wasn’t sustainable.
+              </Text>
+              <Text>
+                I’m currently preparing a debut release for a new music project, and have so far edited about 20 short-form videos to promote three upcoming singles. I’m very interested in using Buffer to streamline scheduling and collaborating with my bandmates on content.
+              </Text>
+              <Text>
+                I directed, shot, and edited all of the video content myself, which highlights the band’s eclectic style using practical effects and a lot of personality. I’m as proud of the visuals as the music.
+              </Text>
+              <Text>
+                See our <Anchor target="_blank" href="https://crankedband.carrd.co/">website</Anchor> for an overview of the upcoming release, and a <Anchor target="_blank" href="dropbox.com/scl/fo/2iaznkm8q0g2e6jjm63j3/AHo6bmno3vkjeAwF1Pn35XI?rlkey=z0ly49nnoysz58w4l07le5ozg&st=mjpptn65&dl=0">Dropbox</Anchor> folder containing short-form video edits.
+              </Text>
+
+              <Text size="lg" fw="900" mt="lg">
+                What makes a high-performing team?
+              </Text>
+              <Text>
+                Of course, you need rockstar team members. But I think a key aspect that’s often missed is developing habits of emotional safety: a responsibility of every team member and manager.
+              </Text>
+              <Text>
+                A team that can be honest with one another can learn and adapt to new situations better than a roster of high-performing ICs that are too afraid to ask questions they think might sound stupid, or think that they need to act like sharks in the workplace to get ahead before someone else does.
+              </Text>
+              <Text>
+                From there, you need leadership with high expectations and the resources to empower the team to rise to the occasion—that’s the gasoline, but the team’s dynamic is what keeps the system healthy and resilient.
               </Text>
             </Stack>
           </Container>
         </Box>
 
-        <style>
-          {`
-            @keyframes scroll {
-              0% {
-                transform: translateX(0);
-              }
-              100% {
-                transform: translateX(-50%);
-              }
-            }
-          `}
-        </style>
+
       </AppShell.Main>
     </AppShell>
   );
