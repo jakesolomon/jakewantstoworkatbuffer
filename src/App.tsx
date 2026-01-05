@@ -146,29 +146,31 @@ function App() {
               }}
             >
               <Carousel.Slide>
-                <Container size="md" mb="50">
-                  <Grid>
-                    <Grid.Col span={{base: 12, md: 4}}>
-                      <Stack gap={0}>
-                        <Text c="white" size="2.5rem" fw="900">
-                          The Growing Guide
-                        </Text>
-                        <Text c="buffer-green.1" size="lg" fw={500}>
-                          Founder
-                        </Text>
-                        <Text c="gray.1" size="md">
-                          <em>2025–Present</em>
-                        </Text>
-                      </Stack>
-                    </Grid.Col>
-                    <Grid.Col span={{base: 12, md: 8}}>
-                      <Stack gap="md">
-                        <Text c="white" size="md" maw={800} lh="lg">
-                          I built a personalized gardening planner that generates climate-specific, month-to-month tasks using a custom scheduling algorithm and AI integration. I designed and shipped the full experience—responsive frontend, backend, dynamic PDF generation pipeline, and digital fulfillment. Over 300 registered free-tier users with a 34% visitor-to-signup conversion rate.
-                        </Text>
-                      </Stack>
-                    </Grid.Col>
-                  </Grid>
+                <Container size="md">
+                  <Box mx={35} mb={40}>
+                    <Grid>
+                      <Grid.Col span={{base: 12, sm: 4}}>
+                        <Stack gap={0}>
+                          <Text c="white" size="2.5rem" fw="900">
+                            The Growing Guide
+                          </Text>
+                          <Text c="buffer-green.1" size="lg" fw={500}>
+                            Founder
+                          </Text>
+                          <Text c="gray.1" size="md">
+                            <em>2025–Present</em>
+                          </Text>
+                        </Stack>
+                      </Grid.Col>
+                      <Grid.Col span={{base: 12, sm: 8}}>
+                        <Stack gap="md">
+                          <Text c="white" size="md" maw={800} lh="lg">
+                            I built a personalized gardening planner that generates climate-specific, month-to-month tasks using a custom scheduling algorithm and AI integration. I designed and shipped the full experience—responsive frontend, backend, dynamic PDF generation pipeline, and digital fulfillment. Over 300 registered free-tier users with a 34% visitor-to-signup conversion rate.
+                          </Text>
+                        </Stack>
+                      </Grid.Col>
+                    </Grid>
+                  </Box>
                 </Container>
               </Carousel.Slide>
               <Carousel.Slide>
