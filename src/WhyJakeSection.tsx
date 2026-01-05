@@ -34,7 +34,7 @@ function WhyJakeSection() {
   ));
 
   return (
-    <Container size="lg">
+    <Container size="md">
       <Text size="3.5rem" ta="center" mb="lg">
         Why <b>Jake</b> is a <Mark color="buffer-green.2"><em>Great...</em></Mark>
       </Text>
@@ -109,10 +109,10 @@ function WhyJakeSection() {
         <Tabs.Panel value="creator">
           <Card shadow="sm" p={0} withBorder radius="md">
             <Grid gutter={0}>
-              <Grid.Col span={{base: 12, md: 5}}>
+              <Grid.Col span={{base: 12, xs: 5}}>
                 <Image src={MeKick} h="100%"/>
               </Grid.Col>
-              <Grid.Col span={{base: 12, md: 7}}>
+              <Grid.Col span={{base: 12, xs: 7}}>
                 <Box bg="buffer-green.9" w="100%">
                   <Text size="3rem" fw="800" c="buffer-green.1" p="lg" w="100%">
                     Modern Music Promotion
@@ -125,7 +125,7 @@ function WhyJakeSection() {
                   <Text>
                     I've also directed, shot, edited, and scheduled nearly two dozen short-form promotional videos for the upcoming debut release and social media campaign for an upcoming music project.
                   </Text>
-                  <Anchor href="#content">
+                  <Anchor href="#content" c="buffer-green.6">
                     Read More
                   </Anchor>
                 </Stack>

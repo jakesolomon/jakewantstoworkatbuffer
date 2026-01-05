@@ -204,7 +204,7 @@ function App() {
         </Box>
 
         {/* Why Jake Section */}
-        <Box id="highlights" bg="white" py={80}>
+        <Box id="highlights" bg="white" py="xl">
           <WhyJakeSection/>
         </Box>
 
@@ -239,13 +239,13 @@ function App() {
         </Box>
 
         {/* Footer */}
-        <Box w="100vw" bg="buffer-green.9" c="buffer-green.2" ta="center">
+        <Box w="100vw" bg="buffer-green.9" ta="center">
           <Container size="md" py="lg">
-            <Text size="xl" fw="800" >
+            <Text size="xl" fw="800" c="buffer-green.2">
               Thanks for your time, and I hope to hear from you soon.
             </Text>
-            <Text>
-              Thoughts? Feedback? I'd love to hear from you. Message me on <Anchor target="_blank" href="https://www.linkedin.com/in/jacobcsolomon/" underline="always">Linkedin</Anchor>.
+            <Text c="buffer-green.2">
+              Thoughts? Feedback? I'd love to hear from you. Message me on <Anchor target="_blank" href="https://www.linkedin.com/in/jacobcsolomon/" underline="always" c="buffer-green.6">Linkedin</Anchor>.
             </Text>
           </Container>
         </Box>
