@@ -48,7 +48,6 @@ const LoomVideo = () => {
     <Box style={{position: "relative"}}>
       <LoomPlayer
         src={loomUrl}
-        autoplay={false}
         style={{width: "100%"}}
       />
     </Box>
