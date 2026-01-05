@@ -44,5 +44,4 @@ export const theme = createTheme({
   lineHeights: {
     md: "1.7rem"
   }
-
 });

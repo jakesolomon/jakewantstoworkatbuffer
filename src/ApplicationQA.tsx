@@ -10,7 +10,7 @@ const qaData: QAItem[] = [
   {
     question: "Why would you like to work at buffer?",
     answer: [
-      <>For the last year I've been happily working at a <Anchor target="_blank" href="https://www.barrettsmillfarm.com/">small organic farm in my hometown</Anchor>—I'm not lying when I say this is the first application I've sent to a tech company in almost a year.</>,
+      <>For the last year I've been happily working at a <Anchor target="_blank" href="https://www.barrettsmillfarm.com/" >small organic farm in my hometown</Anchor>—I'm not lying when I say this is the first application I've sent to a tech company in almost a year.</>,
       "Any trendy company can claim to be people-centric and progressive, but I've never seen a four day work week and transparent pay right on the website. I've heard the term \"unlimited PTO\" thrown around, but I've never seen a report on the amount of time off taken. And it shows: all the employees (ahem, buferroos) that I looked up have exciting digital footprints, showing off technical side projects, podcasts, blogs, and more.",
       "As a passionate creative in music and videography myself, I genuinely want to get to know everyone, and I'm excited about a company culture that fosters this kind of vibrant community."
     ]
