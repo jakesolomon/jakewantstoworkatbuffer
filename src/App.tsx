@@ -48,6 +48,7 @@ function App() {
       </AppShell.Header>
 
       <AppShell.Main>
+
         {/* Hero Section */}
         <Box bg={theme.colors.gray[1]}>
           <Container size="lg">
