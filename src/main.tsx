@@ -9,7 +9,6 @@ import App from './App.tsx'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <MantineProvider theme={theme}>
-      <style>{`body { color: rgb(15, 14, 14); }`}</style>
       <App />
     </MantineProvider>
   </StrictMode>,
