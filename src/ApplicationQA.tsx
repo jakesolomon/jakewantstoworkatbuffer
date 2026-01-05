@@ -1,4 +1,4 @@
-import { Text, Anchor } from "@mantine/core";
+import {Text, Anchor, Box} from "@mantine/core";
 import type {ReactNode} from "react";
 
 interface QAItem {
@@ -70,7 +70,7 @@ export default function ApplicationQA() {
             if (typeof paragraph === "string") {
               return (<Text key={j} mt="sm">{paragraph}</Text>)
             } else {
-              return (paragraph)
+              return (<Box key={j}>{paragraph}</Box>)
             }
           })}
         </div>
