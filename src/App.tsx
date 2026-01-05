@@ -203,6 +203,9 @@ function App() {
           <Container size="sm">
             <Stack gap="lg">
               <ApplicationQA />
+              <Text size="lg" fw="900" mt="lg">
+                Please record a 2-4 minute video sharing something you've learned recently.
+              </Text>
               <LoomVideo />
             </Stack>
           </Container>
