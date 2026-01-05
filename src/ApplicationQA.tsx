@@ -66,9 +66,13 @@ export default function ApplicationQA() {
           <Text size="lg" fw="900" mt="lg">
             {qa.question}
           </Text>
-          {qa.answer.map((paragraph, j) => (
-            <Text key={j} mt="sm">{paragraph}</Text>
-          ))}
+          {qa.answer.map((paragraph, j) => {
+            if (typeof paragraph === "string") {
+              return (<Text key={j} mt="sm">{paragraph}</Text>)
+            } else {
+              return (paragraph)
+            }
+          })}
         </div>
       ))}
     </>
