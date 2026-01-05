@@ -95,8 +95,8 @@ function App() {
               </Grid.Col>
             </Grid>
 
-            <Center >
-              <Flex hiddenFrom="md" direction="column" maw="700px" mx="md" py='xl'>
+            <Center hiddenFrom="md" >
+              <Flex direction="column" maw="700px" mx="md" py='xl'>
                 <Box h="10vh" />
                 <Avatar src={Me} alt="it's me" size="xl" mb="xl" />
                 <Text size="2.5rem" lh={1.15} pt={0}>
