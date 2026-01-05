@@ -1,10 +1,11 @@
-import {Container, Grid, Stack} from "@mantine/core";
+import {Container, Flex, Grid, ScrollArea, Stack} from "@mantine/core";
 import JobAspectCard, {type JobAspect } from "./JobAspectCard";
 import BarChart from "./assets/bar-chart-4.svg"
 import Code from "./assets/code-1.svg"
 import Database from "./assets/database-2.svg"
 import Postman from "./assets/postman.svg"
 import ReactLogo from "./assets/react.svg"
+import VerticalJobAspectCard from "./VerticalJobAspectCard.tsx";
 
 function JobDescriptionSection() {
 
@@ -44,20 +45,21 @@ function JobDescriptionSection() {
       image: BarChart,
       size: 4,
       description: "Instrumented The Growing Guide funnel end-to-end to reach 300+ registered users, 34% visitor-to-signup conversion. Iterated based on where users actually dropped off using Google Analytics + GTM.",
-      horizontal: true
+      // horizontal: true
     },
   }
 
   return (
     <Container size="xl" my="xl">
-      <Grid>
+
+      <Grid visibleFrom='md'>
         <Grid.Col span={{base: 12, md: 4}}>
           <Stack>
             <JobAspectCard aspect={jobAspects.frontend} />
             <JobAspectCard aspect={jobAspects.react} />
           </Stack>
         </Grid.Col>
-        <Grid.Col span={{base: 8}}>
+        <Grid.Col span={{base: 12, md: 8}}>
           <Stack h="100%">
             <JobAspectCard aspect={jobAspects.backend} />
             <Grid>
@@ -71,6 +73,26 @@ function JobDescriptionSection() {
           </Stack>
         </Grid.Col>
       </Grid>
+
+      <ScrollArea visibleFrom="sm" hiddenFrom="md" w="100%">
+        <Flex w={2000}>
+          <VerticalJobAspectCard aspect={jobAspects.frontend} width={400} />
+          <VerticalJobAspectCard aspect={jobAspects.react} width={400} />
+          <VerticalJobAspectCard aspect={jobAspects.backend} width={400} />
+          <VerticalJobAspectCard aspect={jobAspects.api} width={400} />
+          <VerticalJobAspectCard aspect={jobAspects.pipeline} width={400} />
+        </Flex>
+      </ScrollArea>
+
+      <ScrollArea hiddenFrom="sm" w="100%">
+        <Flex w={1500}>
+          <VerticalJobAspectCard aspect={jobAspects.frontend} width={300} />
+          <VerticalJobAspectCard aspect={jobAspects.react} width={300} />
+          <VerticalJobAspectCard aspect={jobAspects.backend} width={300} />
+          <VerticalJobAspectCard aspect={jobAspects.api} width={300} />
+          <VerticalJobAspectCard aspect={jobAspects.pipeline} width={300} />
+        </Flex>
+      </ScrollArea>
     </Container>
   )
 }

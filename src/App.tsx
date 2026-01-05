@@ -108,7 +108,6 @@ function App() {
         <SectionHeader title="Senior Engineer — Growth Marketing"/>
 
         <JobDescriptionSection />
-        <Box h="50px"/>
 
         {/* Scrolling Banner */}
         <Box bg="buffer-green.2" py="md">

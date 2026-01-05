@@ -42,7 +42,7 @@ function JobAspectCard(props: { aspect: JobAspect })  {
                     }
                   : {
                       position: "absolute",
-                      bottom: -40,
+                      bottom: -30,
                       right: -10,
                       transition: "all 400ms",
                     }
