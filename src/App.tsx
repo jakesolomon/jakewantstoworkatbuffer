@@ -1,5 +1,6 @@
 import {
   AppShell,
+  Avatar,
   Container,
   Group,
   Anchor,
@@ -9,7 +10,7 @@ import {
   Box,
   Stack,
   Image,
-  useMantineTheme,
+  useMantineTheme, Flex, Center,
 } from '@mantine/core';
 import { Carousel } from '@mantine/carousel';
 import '@mantine/carousel/styles.css';
@@ -50,7 +51,8 @@ function App() {
         {/* Hero Section */}
         <Box bg={theme.colors.gray[1]}>
           <Container size="lg">
-            <Grid gutter="xl">
+
+            <Grid gutter="xl" visibleFrom="md">
               <Grid.Col span={{base: 12, md: 6}}>
                 <Box pt="20vh">
                   <Text size="3.5rem" lh={1.15} fw={700} pb={0}>I'm Jake,</Text>
@@ -75,6 +77,29 @@ function App() {
                 <Box h="650px"/>
               </Grid.Col>
             </Grid>
+
+            <Center >
+              <Flex hiddenFrom="md" direction="column" maw="700px" mx="md" py='xl'>
+                <Box h="10vh" />
+                <Avatar src={Me} alt="it's me" size="xl" mb="xl" />
+                <Text size="2.5rem" lh={1.15} pt={0}>
+                  <b>I'm Jake, </b>
+                  <Mark color="buffer-green.2">a product-minded FE Engineer</Mark>{' '}
+                  focused on <em>growth.</em>
+                </Text>
+                <Group gap="sm" pt="lg">
+                  <Anchor href="#" c="dark" fw="bold">
+                    LinkedIn
+                  </Anchor>
+                  <Text size="2rem" fw={100} pb="6px">|</Text>
+                  <Anchor href="#" c="dark" fw="bold">
+                    Resume
+                  </Anchor>
+                </Group>
+                <Box h="10vh" />
+              </Flex>
+            </Center>
+
           </Container>
         </Box>
 
