@@ -209,11 +209,20 @@ function App() {
               <LoomVideo />
             </Stack>
           </Container>
+        </Box>
 
-          <Container size="md">
-
+        {/* Footer */}
+        <Box w="100vw" bg="buffer-green.9" c="buffer-green.2" ta="center">
+          <Container size="md" py="lg">
+            <Text size="xl" fw="800" >
+              Thanks for your time, and I hope to hear from you soon.
+            </Text>
+            <Text>
+              Thoughts? Feedback? I'd love to hear from you. Message me on <Anchor target="_blank" href="https://www.linkedin.com/in/jacobcsolomon/" underline="always">Linkedin</Anchor>.
+            </Text>
           </Container>
         </Box>
+
       </AppShell.Main>
     </AppShell>
   );
