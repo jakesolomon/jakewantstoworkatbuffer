@@ -19,7 +19,7 @@ function JobAspectCard(props: { aspect: JobAspect })  {
             <Text size="1.4rem" fw="550" c="buffer-dark.7" >
               {title}
             </Text>
-            <Text mt="sm" c="buffer-dark.5">
+            <Text mt="sm" c="buffer-dark.6">
               {description}
             </Text>
           </Grid.Col>
@@ -30,6 +30,7 @@ function JobAspectCard(props: { aspect: JobAspect })  {
                 h={hovered ? 180 : 170}
                 w={hovered ? 180 : 170}
                 fit="contain"
+                opacity="0.85"
                 style={
                   horizontal
                   ? {

@@ -43,5 +43,17 @@ export const theme = createTheme({
   },
   lineHeights: {
     md: "1.7rem"
+  },
+  components: {
+    Text: {
+      defaultProps: {
+        c: 'buffer-dark.9'
+      }
+    }
   }
+  // variantColorResolver: {
+  //   colors: {
+  //     undefined
+  //   }
+  // }
 });
