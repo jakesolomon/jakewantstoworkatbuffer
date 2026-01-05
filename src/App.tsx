@@ -10,8 +10,11 @@ import {
   Box,
   Stack,
   Image,
-  useMantineTheme, Flex, Center,
+  Flex,
+  Center,
+  useMantineTheme,
 } from '@mantine/core';
+import { useScrollIntoView } from '@mantine/hooks';
 import { Carousel } from '@mantine/carousel';
 import '@mantine/carousel/styles.css';
 import Me from "./assets/me.png";
@@ -26,21 +29,34 @@ function App() {
 
   const theme = useMantineTheme();
 
+  const { scrollIntoView: scrollToSkills, targetRef: skillsRef } = useScrollIntoView<HTMLDivElement>({
+    offset: 40,
+  });
+  const { scrollIntoView: scrollToExperience, targetRef: experienceRef } = useScrollIntoView<HTMLDivElement>({
+    offset: 60,
+  });
+  const { scrollIntoView: scrollToHighlights, targetRef: highlightsRef } = useScrollIntoView<HTMLDivElement>({
+    offset: 60,
+  });
+  const { scrollIntoView: scrollToApplication, targetRef: applicationRef } = useScrollIntoView<HTMLDivElement>({
+    offset: 60,
+  });
+
   return (
     <AppShell header={{height: 60}}>
       <AppShell.Header>
         <Container size="lg" h="100%">
           <Group h="100%" justify="flex-end" gap="xl">
-            <Anchor href="#why-buffer" c="dark">
-              Why Buffer?
+            <Anchor href="#skills" c="dark" onClick={() => scrollToSkills()}>
+              Skills
             </Anchor>
-            <Anchor href="#experience" c="dark">
+            <Anchor href="#experience" c="dark" onClick={() => scrollToExperience()}>
               Experience
             </Anchor>
-            <Anchor href="#highlights" c="dark">
+            <Anchor href="#highlights" c="dark" onClick={() => scrollToHighlights()}>
               Highlights
             </Anchor>
-            <Anchor href="#application" c="dark">
+            <Anchor href="#application" c="dark" onClick={() => scrollToApplication()}>
               Application
             </Anchor>
           </Group>
@@ -104,7 +120,7 @@ function App() {
           </Container>
         </Box>
 
-        <Box h="70px"/>
+        <Box h="70px" id="skills" ref={skillsRef}/>
         <SectionHeader title="Senior Engineer — Growth Marketing"/>
 
         <JobDescriptionSection />
@@ -136,7 +152,7 @@ function App() {
         </Box>
 
         {/* Experience Section */}
-        <Box id="experience" bg="buffer-green.9" pt="100" pb="60">
+        <Box bg="buffer-green.9" pt="100" pb="60" id="experience" ref={experienceRef}>
           <Container size="xl">
             <Carousel
               controlsOffset="sm"
@@ -204,12 +220,12 @@ function App() {
         </Box>
 
         {/* Why Jake Section */}
-        <Box id="highlights" bg="white" py="xl">
+        <Box bg="white" py="xl" id="highlights" ref={highlightsRef}>
           <WhyJakeSection/>
         </Box>
 
         {/* Application Header */}
-        <Container size="lg" >
+        <Container size="lg" id="application" ref={applicationRef}>
           <Box py="xl" bg="buffer-green.9" w="50vw" style={{position: "absolute", left: 0, zIndex: -1}}>
             <Text size="5rem" c="buffer-green.2">
               {'\u200B'}
@@ -226,7 +242,7 @@ function App() {
         </Container>
 
         {/* Application Section */}
-        <Box id="application" bg="white" py="md">
+        <Box bg="white" py="md">
           <Container size="sm">
             <Stack gap="lg">
               <ApplicationQA />

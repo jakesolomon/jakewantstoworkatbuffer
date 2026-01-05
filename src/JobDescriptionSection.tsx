@@ -37,7 +37,7 @@ function JobDescriptionSection() {
       color: "grape.2",
       image: Postman,
       size: 5,
-      description: "AI APIs, email delivery (SES), storage for user assets (S3), external data sources, and user auth."
+      description: "AI APIs, payment processing (Stripe), email delivery (SES), storage for user assets (S3), external data sources, and user auth."
     },
     pipeline: {
       title: "Debugging Tracking Pipelines",
