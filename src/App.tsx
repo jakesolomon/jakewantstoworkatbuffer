@@ -78,12 +78,16 @@ function App() {
                     focused on <em>growth.</em>
                   </Text>
                   <Group gap="sm" pt="lg">
-                    <Anchor href="#" c="dark" fw="bold">
+                    <Anchor target="_blank" href="#" c="dark" fw="bold">
                       LinkedIn
                     </Anchor>
                     <Text size="2rem" fw={100} pb="6px">|</Text>
-                    <Anchor href="#" c="dark" fw="bold">
+                    <Anchor target="_blank" href="#" c="dark" fw="bold">
                       Resume
+                    </Anchor>
+                    <Text size="2rem" fw={100} pb="6px">|</Text>
+                    <Anchor target="_blank" href="https://github.com/jakesolomon/jakewantstoworkatbuffer/blob/main/README.md" c="dark" fw="bold">
+                      Readme
                     </Anchor>
                   </Group>
                 </Box>
@@ -105,12 +109,16 @@ function App() {
                   focused on <em>growth.</em>
                 </Text>
                 <Group gap="sm" pt="lg">
-                  <Anchor href="#" c="dark" fw="bold">
+                  <Anchor target="_blank" href="#" c="dark" fw="bold">
                     LinkedIn
                   </Anchor>
                   <Text size="2rem" fw={100} pb="6px">|</Text>
-                  <Anchor href="#" c="dark" fw="bold">
+                  <Anchor target="_blank" href="#" c="dark" fw="bold">
                     Resume
+                  </Anchor>
+                  <Text size="2rem" fw={100} pb="6px">|</Text>
+                  <Anchor target="_blank" href="https://github.com/jakesolomon/jakewantstoworkatbuffer/blob/main/README.md" c="dark" fw="bold">
+                    Readme
                   </Anchor>
                 </Group>
                 <Box h="10vh" />

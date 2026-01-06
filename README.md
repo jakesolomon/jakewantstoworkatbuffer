@@ -1,73 +1,71 @@
-# React + TypeScript + Vite
+# About This Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This website serves as both a delivery of my job application to Buffer and a demonstration of clean frontend code.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19** with **TypeScript** for type-safe component development
+- **Mantine UI** for a consistent, themeable design system
+- **Vite** for fast development and optimized builds
+- **Vercel Analytics** for performance tracking
 
-## React Compiler
+## Code Highlights
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Theme Management
+Centralized design tokens in `theme.ts`:
+- Custom color palettes (Buffer Green, neutral grays)
+- Typography scales and heading styles
+- Component-level defaults for consistency
+- All defined using Mantine's `createTheme` API
 
-## Expanding the ESLint configuration
+### Responsive Design
+Mobile-first approach with Mantine's responsive utilities:
+- Grid layouts that adapt from mobile to desktop
+- Conditional rendering for different viewport sizes
+- Touch-friendly navigation and interactions
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### User Experience
+- Smooth scroll navigation with Mantine hooks
+- Progressive enhancement (Loom player with mobile fallback)
+- Optimized animations and transitions
+- Accessible markup and keyboard navigation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Project Structure
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+├── App.tsx                    # Main application shell
+├── theme.ts                   # Design system configuration
+├── components/
+│   ├── ApplicationQA.tsx      # Structured Q&A content
+│   ├── JobDescriptionSection.tsx
+│   ├── JobAspectCard.tsx      # Reusable card components
+│   ├── WhyJakeSection.tsx
+│   ├── SectionHeader.tsx
+│   └── LoomVideo.tsx          # Video player with fallback
+└── assets/                    # Images and media
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Development Practices
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Component Composition**: Favoring small, focused components over monolithic structures
+- **TypeScript First**: Leveraging types for self-documenting code and catching errors early
+- **Design System**: Consistent theming through centralized configuration
+- **Performance**: Optimized builds, lazy loading, and analytics integration
+- **Accessibility**: Semantic HTML and ARIA attributes where needed
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Running Locally
+
+```bash
+npm install
+npm run dev
 ```
+
+Build for production:
+```bash
+npm run build
+```
+
+---
+
+Built with attention to detail, clean code practices, and a focus on maintainability—the same approach I bring to every project.
