@@ -70,7 +70,7 @@ export default function ApplicationQA() {
             if (typeof paragraph === "string") {
               return (<Text key={j} mt="sm">{paragraph}</Text>)
             } else {
-              return (<Box key={j}>{paragraph}</Box>)
+              return (<Box key={j} mt="sm">{paragraph}</Box>)
             }
           })}
         </div>
