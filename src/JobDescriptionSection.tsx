@@ -1,9 +1,9 @@
 import {Container, Flex, Grid, ScrollArea, Stack} from "@mantine/core";
 import JobAspectCard, {type JobAspect } from "./JobAspectCard";
 import BarChart from "./assets/bar-chart-4.svg"
+import ChatBubble from "./assets/chat-bubble-2.svg"
 import Code from "./assets/code-1.svg"
 import Database from "./assets/database-2.svg"
-import Postman from "./assets/postman.svg"
 import ReactLogo from "./assets/react.svg"
 import VerticalJobAspectCard from "./VerticalJobAspectCard.tsx";
 
@@ -14,38 +14,39 @@ function JobDescriptionSection() {
       title: "The Full Frontend Scope",
       color: "violet.2",
       image: Code,
-      size: 5,
-      description: "End-to-end ownership of production services — component architecture, performance, accessibility, and shipping. Shipped high-visibility enterprise features at aPriori."
+      description: "Shipped and maintained production features across aPriori's React frontend serving enterprise customers. Extended localization framework to support new unit systems and real-time currency conversion. Resolved CI/CD pipeline failures, increased test coverage in legacy code, and reviewed team code daily."
     },
     react: {
       title: "Strong with React and Modern Web Development",
       color: "red.3",
       image: ReactLogo,
-      size: 7,
-      description: "5+ years in React and TypeScript. Design system components and maintainable UI using modular CSS and Storybook components."
+      description: "4 years building production UIs in React and TypeScript. Regularly extended shared component libraries using modular CSS and Storybook."
     },
     backend: {
       title: "Diving into Backend Logic",
-      color: "cyan.2",
+      color: "yellow.2",
       image: Database,
-      size: 3,
-      description: "Built all backend logic for The Growing Guide on AWS Lambda — handling scheduling logic, PDF generation workflows, email registration, and order fulfillment. Owned multiple Java + Spring Boot microservices and databases (Postgres and MongoDB) at aPriori and interfaced with 5+ backend teams to coordinate cross-team projects.",
-      horizontal: true
+      description: "Built The Growing Guide's backend to generate AI-powered gardening schedules. Designed the data schema, integrated LLM responses, and rendered dynamic PDFs via AWS Lambda. At aPriori, owned Java + Spring Boot microservices with Postgres and MongoDB, coordinating across 5+ backend teams.",
+      // horizontal: true
     },
-    api: {
-      title: "Connecting Third Party APIs",
+    // api: {
+    //   title: "Connecting Third Party APIs",
+    //   color: "grape.2",
+    //   image: Postman,
+    //   description: "AI APIs, payment processing (Stripe), email delivery (SES), storage for user assets (S3), external data sources, and user auth."
+    // },
+    communication: {
+      title: "Communicating Across Teams",
       color: "grape.2",
-      image: Postman,
-      size: 5,
-      description: "AI APIs, payment processing (Stripe), email delivery (SES), storage for user assets (S3), external data sources, and user auth."
+      image: ChatBubble,
+      description: "Coordinated with backend teams across worldwide time zones at aPriori and presented technical plans to non-technical leadership. Facilitated stakeholder demos and refinement sessions between engineers, product managers, and designers."
     },
     pipeline: {
-      title: "Debugging Tracking Pipelines",
-      color: "yellow.2",
+      title: "Conversion Optimization",
+      color: "cyan.2",
       image: BarChart,
-      size: 4,
-      description: "Instrumented The Growing Guide funnel end-to-end to reach 300+ registered users, 34% visitor-to-signup conversion. Iterated based on where users actually dropped off using Google Analytics + GTM.",
-      // horizontal: true
+      description: "Drove 34% visitor-to-signup conversion for The Growing Guide by designing a low-friction onboarding questionnaire and optimizing Google Ads with marketing. Instrumented the full funnel with Google Analytics + GTM to measure performance and iterate on campaigns.",
+      horizontal: true
     },
   }
 
@@ -61,13 +62,13 @@ function JobDescriptionSection() {
         </Grid.Col>
         <Grid.Col span={{base: 12, md: 8}}>
           <Stack h="100%">
-            <JobAspectCard aspect={jobAspects.backend} />
+            <JobAspectCard aspect={jobAspects.pipeline} />
             <Grid>
               <Grid.Col span={{base: 12, md: 4}}>
-                <JobAspectCard aspect={jobAspects.api} />
+                <JobAspectCard aspect={jobAspects.communication} />
               </Grid.Col>
               <Grid.Col span={{base: 12, md: 8}}>
-                <JobAspectCard aspect={jobAspects.pipeline} />
+                <JobAspectCard aspect={jobAspects.backend} />
               </Grid.Col>
             </Grid>
           </Stack>
@@ -79,7 +80,7 @@ function JobDescriptionSection() {
           <VerticalJobAspectCard aspect={jobAspects.frontend} width={400} />
           <VerticalJobAspectCard aspect={jobAspects.react} width={400} />
           <VerticalJobAspectCard aspect={jobAspects.backend} width={400} />
-          <VerticalJobAspectCard aspect={jobAspects.api} width={400} />
+          <VerticalJobAspectCard aspect={jobAspects.communication} width={400} />
           <VerticalJobAspectCard aspect={jobAspects.pipeline} width={400} />
         </Flex>
       </ScrollArea>
@@ -89,7 +90,7 @@ function JobDescriptionSection() {
           <VerticalJobAspectCard aspect={jobAspects.frontend} width={300} />
           <VerticalJobAspectCard aspect={jobAspects.react} width={300} />
           <VerticalJobAspectCard aspect={jobAspects.backend} width={300} />
-          <VerticalJobAspectCard aspect={jobAspects.api} width={300} />
+          <VerticalJobAspectCard aspect={jobAspects.communication} width={300} />
           <VerticalJobAspectCard aspect={jobAspects.pipeline} width={300} />
         </Flex>
       </ScrollArea>

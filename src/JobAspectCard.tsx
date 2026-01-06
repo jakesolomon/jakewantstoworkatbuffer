@@ -1,7 +1,7 @@
 import {Box, Card, Grid, Image, lighten, parseThemeColor, Text, useMantineTheme} from "@mantine/core";
 import {useHover} from "@mantine/hooks";
 
-export interface JobAspect {title: string, color: string, size: number, image: string, description: string, horizontal?: boolean}
+export interface JobAspect {title: string, color: string, image: string, description: string, horizontal?: boolean}
 
 function JobAspectCard(props: { aspect: JobAspect })  {
   const { hovered, ref } = useHover()
@@ -27,7 +27,7 @@ function JobAspectCard(props: { aspect: JobAspect })  {
             <Box h="100">
               <Image
                 src={image}
-                h={hovered ? 180 : 170}
+                h={hovered ? 150 : 130}
                 w={hovered ? 180 : 170}
                 fit="contain"
                 opacity="0.85"
@@ -35,15 +35,15 @@ function JobAspectCard(props: { aspect: JobAspect })  {
                   horizontal
                   ? {
                       position: "absolute",
-                      bottom: -10,
-                      right: 10,
+                      bottom: 0,
+                      right: 0,
                       transition: "all 400ms",
                       transform: "scale(1.4)"
                     }
                   : {
                       position: "absolute",
-                      bottom: -30,
-                      right: -10,
+                      bottom: 0,
+                      right: 0,
                       transition: "all 400ms",
                     }
                 }

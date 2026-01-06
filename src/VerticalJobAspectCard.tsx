@@ -1,7 +1,6 @@
 import {Box, Card, Center, Image, lighten, parseThemeColor, Text, useMantineTheme} from "@mantine/core";
 import {useHover} from "@mantine/hooks";
-
-export interface JobAspect {title: string, color: string, size: number, image: string, description: string, horizontal?: boolean}
+import { type JobAspect } from "./JobAspectCard"
 
 function VerticalJobAspectCard(props: { aspect: JobAspect, width: number })  {
   const { hovered, ref } = useHover()

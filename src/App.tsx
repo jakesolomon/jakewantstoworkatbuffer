@@ -135,7 +135,7 @@ function App() {
                 animation: 'scroll 15s linear infinite',
               }}
             >
-              {Array.from({ length: 10 }).map((_, i) => (
+              {Array.from({ length: 20 }).map((_, i) => (
                 <Text
                   key={i}
                   size="1.6rem"
@@ -171,7 +171,7 @@ function App() {
                             The Growing Guide
                           </Text>
                           <Text c="buffer-green.1" size="lg" fw={500}>
-                            Founder
+                            Lead Engineer/Founder
                           </Text>
                           <Text c="gray.1" size="md">
                             <em>2025–Present</em>
