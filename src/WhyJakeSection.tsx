@@ -115,7 +115,7 @@ function WhyJakeSection() {
                   <Text>
                     I've also directed, shot, edited, and scheduled nearly two dozen short-form promotional videos for the upcoming debut release and social media campaign for an upcoming music project.
                   </Text>
-                  <Anchor href="#content" c="buffer-green.6">
+                  <Anchor href="#content">
                     Read More
                   </Anchor>
                 </Stack>

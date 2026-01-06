@@ -10,9 +10,9 @@ const qaData: QAItem[] = [
   {
     question: "Why would you like to work at buffer?",
     answer: [
-      <>For the last year I've been happily working at a <Anchor target="_blank" href="https://www.barrettsmillfarm.com/" >small organic farm in my hometown</Anchor>—I'm not lying when I say this is the first application I've sent to a tech company in almost a year.</>,
-      "Any trendy company can claim to be people-centric and progressive, but I've never seen a four day work week and transparent pay right on the website. I've heard the term \"unlimited PTO\" thrown around, but I've never seen a report on the amount of time off taken. And it shows: all the employees (ahem, buferroos) that I looked up have exciting digital footprints, showing off technical side projects, podcasts, blogs, and more.",
-      "As a passionate creative in music and videography myself, I genuinely want to get to know everyone, and I'm excited about a company culture that fosters this kind of vibrant community."
+      <>I've spent the last year building <Anchor target="_blank\" href="https://thegrowingguide.com/">The Growing Guide</Anchor> and learning what it takes to grow a SaaS product—experimenting with conversion flows, optimizing ad campaigns, and shipping features that move metrics. But as a team of one, I’m starting to feel the limits of what I can learn on my own. I want to work on growth problems at scale, with a team that learns from real data. This is now my second application to Buffer. After following along for the past few months, I’m still confident I see a place for myself there</>,
+      "I’m confident in how focused the product vision is: make content creation easier by planning across platforms. That confidence is reflected in the value-first model, which builds rapport with customers before asking anything in return (just how I want to operate The Growing Guide, too). The problems Buffer faces now aren’t about focusing the product, they’re about enabling and building the momentum of a user base that believes in the value—problems that come down to concrete engineering solutions like the referral program, programmatic pages, and localization.",
+      "What stands out to me about Buffer is that the company lives its mission. With a team of people engaged in creative pursuits, showcased on Start Pages and broadcast as a Team of Creators, Buffer shows that you can be an industry leader while investing in your people too. That’s where I want to grow next."
     ]
   },
   {

@@ -261,7 +261,7 @@ function App() {
               Thanks for your time, and I hope to hear from you soon.
             </Text>
             <Text c="buffer-green.2">
-              Thoughts? Feedback? I'd love to hear from you. Message me on <Anchor target="_blank" href="https://www.linkedin.com/in/jacobcsolomon/" underline="always" c="buffer-green.6">Linkedin</Anchor>.
+              Thoughts? Feedback? I'd love to hear from you. Message me on <Anchor target="_blank" href="https://www.linkedin.com/in/jacobcsolomon/" underline="always">Linkedin</Anchor>.
             </Text>
           </Container>
         </Box>

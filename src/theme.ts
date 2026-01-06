@@ -49,7 +49,12 @@ export const theme = createTheme({
       defaultProps: {
         c: 'buffer-dark.9'
       }
-    }
+    },
+    Anchor: {
+      defaultProps: {
+        c: 'buffer-green.6', // Override Text's default color for Anchors
+      },
+    },
   }
   // variantColorResolver: {
   //   colors: {
