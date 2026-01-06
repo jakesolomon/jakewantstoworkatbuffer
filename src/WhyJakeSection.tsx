@@ -68,39 +68,27 @@ function WhyJakeSection() {
         </Tabs.Panel>
 
         <Tabs.Panel value="collaborator">
-          <Grid>
-            <Grid.Col span={{base: 12, md: 4}}>
+          <Grid >
+            <Grid.Col span={{base: 12, sm: 6}}>
               <Card shadow="sm" p={0} withBorder radius="lg">
                 <Card h="100%" bg="cyan.2" m="xs" py="lg" radius="md" shadow="0" style={{transition: "all 200ms"}}>
                   <Text size="1.4rem" fw="550" c="buffer-dark.7" >
-                    Scrum Duty
+                    I bring clarity to complex planning.
                   </Text>
                   <Text mt="sm" c="buffer-dark.5">
-                    When our Scrum Master at aPriori was reassigned, I took over meeting schedule and facilitation. I introduced clearer meeting expectations and structure, which reduced overruns and improved engagement.
+                    Ran Big Room Planning for my team at aPriori—synthesizing 3- and 6-month engineering plans, resolving cross-team dependencies, and presenting daily to leadership during planning weeks. Helped reduce average project timeline inflation from over 100% to below 15% by improving estimation accuracy and surfacing blockers early.
                   </Text>
                 </Card>
               </Card>
             </Grid.Col>
-            <Grid.Col span={{base: 12, md: 4}}>
+            <Grid.Col span={{base: 12, sm: 6}}>
               <Card shadow="sm" p={0} withBorder radius="lg">
                 <Card h="100%" bg="red.2" m="xs" py="lg" radius="md" shadow="0" style={{transition: "all 200ms"}}>
                   <Text size="1.4rem" fw="550" c="buffer-dark.7" >
-                    Big Room Planning
+                    I step in when processes need help.
                   </Text>
                   <Text mt="sm" c="buffer-dark.5">
-                    I led quarterly Big Room Planning for my team at aPriori, producing clear engineering plans and resolving cross-team dependencies. Synthesized 3- and 6-month plans with sign-off from the full team, and presented daily to leadership during planning weeks. Helped reduce an average project timeline inflation from over 100% to below 15%.
-                  </Text>
-                </Card>
-              </Card>
-            </Grid.Col>
-            <Grid.Col span={{base: 12, md: 4}}>
-              <Card shadow="sm" p={0} withBorder radius="lg">
-                <Card h="100%" bg="yellow.2" m="xs" py="lg" radius="md" shadow="0" style={{transition: "all 200ms"}}>
-                  <Text size="1.4rem" fw="550" c="buffer-dark.7" >
-                    Mentorship
-                  </Text>
-                  <Text mt="sm" c="buffer-dark.5">
-                    I was selected to mentor a college intern at aPriori, overseeing his experience and providing weekly code reviews.
+                    Took over Scrum Master duties when our SM was reassigned, introducing clearer meeting structure that reduced overruns and improved engagement. Mentored a college intern with weekly code reviews and project guidance.
                   </Text>
                 </Card>
               </Card>
