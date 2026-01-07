@@ -16,12 +16,12 @@ import MeKick from "./assets/me-kick.png"
 function WhyJakeSection() {
 
   const elements = [
-    { tech: "React + Typescript", experience: "5 years building production React/TS apps, including high-visibility enterprise features."},
+    { tech: "React + Typescript", experience: "4 years building production React/TS apps, including high-visibility enterprise features."},
     { tech: "GTM", experience: "GTM-based tracking to support growth experiments, paid acquisition, and conversion analysis."},
     { tech: "Storybook-Based Design System", experience: "Extended aPriori's design-system components in Storybook using modular CSS."},
     { tech: "Node + TS backend", experience: "Signup, gating, fulfillment, email delivery, and third-party integrations using TypeScript-based serverless functions."},
     { tech: "AI", experience: "Integrating LLM APIs to generate personalized, user-facing content."},
-    { tech: "Recharts", experience: "Built interactive production data visualizations using Recharts"},
+    { tech: "Recharts", experience: "Built interactive production data visualizations using Recharts."},
     { tech: "GraphQL", experience: "Consume GraphQL APIs via AWS Amplify, using schema-driven contracts to connect React clients with Lambda-based backend logic."},
     { tech: "Jest + react-testing-library", experience: "Maintained and extended testing infrastructure at aPriori using React Testing Library and Jest."},
     { tech: "MongoDB", experience: "Production experience using MongoDB for non-relational data storage in backend workflows."},

@@ -38,7 +38,7 @@ function App() {
   const { scrollIntoView: scrollToExperience, targetRef: experienceRef } = useScrollIntoView<HTMLDivElement>({
     offset: 60,
   });
-  const { scrollIntoView: scrollToHighlights, targetRef: highlightsRef } = useScrollIntoView<HTMLDivElement>({
+  const { scrollIntoView: scrollToAbout, targetRef: aboutRef } = useScrollIntoView<HTMLDivElement>({
     offset: 60,
   });
   const { scrollIntoView: scrollToApplication, targetRef: applicationRef } = useScrollIntoView<HTMLDivElement>({
@@ -56,8 +56,8 @@ function App() {
             <Anchor href="#experience" c="dark" onClick={() => scrollToExperience()}>
               Experience
             </Anchor>
-            <Anchor href="#highlights" c="dark" onClick={() => scrollToHighlights()}>
-              Highlights
+            <Anchor href="#about" c="dark" onClick={() => scrollToAbout()}>
+              About Me
             </Anchor>
             <Anchor href="#application" c="dark" onClick={() => scrollToApplication()}>
               Application
@@ -81,7 +81,7 @@ function App() {
                     focused on <em>growth.</em>
                   </Text>
                   <Group gap="sm" pt="lg">
-                    <Anchor target="_blank" href="#" c="dark" fw="bold">
+                    <Anchor target="_blank" href="https://www.linkedin.com/in/jacobcsolomon/" c="dark" fw="bold">
                       LinkedIn
                     </Anchor>
                     <Text size="2rem" fw={100} pb="6px">|</Text>
@@ -112,7 +112,7 @@ function App() {
                   focused on <em>growth.</em>
                 </Text>
                 <Group gap="sm" pt="lg">
-                  <Anchor target="_blank" href="#" c="dark" fw="bold">
+                  <Anchor target="_blank" href="https://www.linkedin.com/in/jacobcsolomon/" c="dark" fw="bold">
                     LinkedIn
                   </Anchor>
                   <Text size="2rem" fw={100} pb="6px">|</Text>
@@ -231,7 +231,7 @@ function App() {
         </Box>
 
         {/* Why Jake Section */}
-        <Box bg="white" py="xl" id="highlights" ref={highlightsRef}>
+        <Box bg="white" py="xl" id="about" ref={aboutRef}>
           <WhyJakeSection/>
         </Box>
 
