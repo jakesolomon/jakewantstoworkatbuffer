@@ -13,7 +13,9 @@ import {
 } from '@mantine/core';
 import MeKick from "./assets/me-kick.png"
 
-function WhyJakeSection() {
+function WhyJakeSection(props: {scrollToContent: () => void}) {
+
+  const { scrollToContent } = props;
 
   const elements = [
     { tech: "React + Typescript", experience: "4 years building production React/TS apps, including high-visibility enterprise features."},
@@ -115,7 +117,7 @@ function WhyJakeSection() {
                   <Text>
                     I've also directed, shot, edited, and scheduled nearly two dozen short-form promotional videos for the upcoming debut release and social media campaign for an upcoming music project.
                   </Text>
-                  <Anchor href="#content">
+                  <Anchor href="#content" onClick={() => scrollToContent()}>
                     Read More
                   </Anchor>
                 </Stack>

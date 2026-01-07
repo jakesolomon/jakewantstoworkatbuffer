@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import {
   AppShell,
   Avatar,
@@ -44,6 +45,35 @@ function App() {
   const { scrollIntoView: scrollToApplication, targetRef: applicationRef } = useScrollIntoView<HTMLDivElement>({
     offset: 60,
   });
+  const { scrollIntoView: scrollToContent, targetRef: contentRef } = useScrollIntoView<HTMLDivElement>({
+    offset: 60,
+  });
+
+  // Handle initial hash on page load
+  useEffect(() => {
+    const hash = window.location.hash.slice(1); // Remove the # from the hash
+    if (hash) {
+      setTimeout(() => {
+        switch (hash) {
+          case 'skills':
+            scrollToSkills();
+            break;
+          case 'experience':
+            scrollToExperience();
+            break;
+          case 'about':
+            scrollToAbout();
+            break;
+          case 'application':
+            scrollToApplication();
+            break;
+          case 'content':
+            scrollToContent();
+            break;
+        }
+      }, 100); // Small delay to ensure elements are rendered
+    }
+  }, [scrollToSkills, scrollToExperience, scrollToAbout, scrollToApplication, scrollToContent]);
 
   return (
     <AppShell header={{height: 60}}>
@@ -232,7 +262,7 @@ function App() {
 
         {/* Why Jake Section */}
         <Box bg="white" py="xl" id="about" ref={aboutRef}>
-          <WhyJakeSection/>
+          <WhyJakeSection scrollToContent={scrollToContent}/>
         </Box>
 
         {/* Application Header */}
@@ -256,7 +286,7 @@ function App() {
         <Box bg="white" py="md">
           <Container size="sm">
             <Stack gap="lg">
-              <ApplicationQA />
+              <ApplicationQA contentRef={contentRef} />
               <Text size="lg" fw="900" mt="lg">
                 Please record a 2-4 minute video sharing something you've learned recently.
               </Text>
