@@ -16,14 +16,17 @@ import {
 } from '@mantine/core';
 import { useScrollIntoView } from '@mantine/hooks';
 import { Carousel } from '@mantine/carousel';
-import '@mantine/carousel/styles.css';
-import Me from "./assets/me.png";
 import SectionHeader from "./SectionHeader.tsx";
 import WhyJakeSection from "./WhyJakeSection.tsx";
-import "./App.css"
 import JobDescriptionSection from "./JobDescriptionSection.tsx";
 import LoomVideo from "./LoomVideo.tsx";
 import ApplicationQA from "./ApplicationQA.tsx";
+
+import Me from "./assets/me.png";
+import Resume from "./assets/Jacob-Solomon-2026-Resume.pdf"
+
+import '@mantine/carousel/styles.css';
+import "./App.css"
 
 function App() {
 
@@ -82,7 +85,7 @@ function App() {
                       LinkedIn
                     </Anchor>
                     <Text size="2rem" fw={100} pb="6px">|</Text>
-                    <Anchor target="_blank" href="#" c="dark" fw="bold">
+                    <Anchor target="_blank" href={Resume} c="dark" fw="bold">
                       Resume
                     </Anchor>
                     <Text size="2rem" fw={100} pb="6px">|</Text>
@@ -113,7 +116,7 @@ function App() {
                     LinkedIn
                   </Anchor>
                   <Text size="2rem" fw={100} pb="6px">|</Text>
-                  <Anchor target="_blank" href="#" c="dark" fw="bold">
+                  <Anchor target="_blank" href={Resume} c="dark" fw="bold">
                     Resume
                   </Anchor>
                   <Text size="2rem" fw={100} pb="6px">|</Text>
