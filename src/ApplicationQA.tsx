@@ -66,9 +66,9 @@ function ApplicationQA(props: { contentRef: PolymorphicRef<"div"> }) {
     <>
       {qaData.map((qa, i) => (
         <div key={i}>
-          <Text size="lg" fw="900" mt="sm">
+          <Box size="lg" fw="900" mt="sm">
             {qa.question}
-          </Text>
+          </Box>
           {qa.answer.map((paragraph, j) => {
             if (typeof paragraph === "string") {
               return (<Text key={j} mt="sm">{paragraph}</Text>)
