@@ -26,7 +26,7 @@ function ApplicationQA(props: { contentRef: PolymorphicRef<"div"> }) {
         "With a very short sales window (early spring) for selling garden plans, I had one week to ship. The redesign had to rearrange the user flow, isolate the v2 traffic from existing users, and decouple checkout and fulfillment logic.",
         "To build the v2 architecture, I stood up a new landing page to receive ad traffic, implemented context-aware routing to keep navigation inside the v2 namespace, and rebuilt the checkout, planner, and purchase routing. On the backend, modular Lambda functions handled payments (Stripe), content generation (LLM + React PDF layout), and fulfillment (S3 + SES).",
         "I shipped in 6 days with GTM instrumentation tracking user drop-off and conversion. The result of the test: withholding value actually decreased user engagement without improving conversion, invalidating the original hypothesis.",
-        "Getting these results as fast as we did marked a massive step forward. Early in the product’s life I tended to over-engineer solutions before learning how users would interact with them. Now, I approach growth-oriented systems with a foucus on shortening the loop between building and learning."
+        "Getting these results as fast as we did marked a massive step forward. Early in the product’s life I tended to over-engineer solutions before learning how users would interact with them. Now, I approach growth-oriented systems with a focus on shortening the loop between building and learning."
       ]
     },
     {
