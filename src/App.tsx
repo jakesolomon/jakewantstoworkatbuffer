@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import {
   AppShell,
   Avatar,
+  Burger,
   Container,
   Group,
   Anchor,
@@ -15,7 +16,7 @@ import {
   Center,
   useMantineTheme,
 } from '@mantine/core';
-import { useScrollIntoView } from '@mantine/hooks';
+import { useDisclosure, useScrollIntoView } from '@mantine/hooks';
 import { Carousel } from '@mantine/carousel';
 import SectionHeader from "./SectionHeader.tsx";
 import WhyJakeSection from "./WhyJakeSection.tsx";
@@ -49,6 +50,8 @@ function App() {
     offset: 60,
   });
 
+  const [burgerOpened, { toggle }] = useDisclosure();
+
   // Handle initial hash on page load
   useEffect(() => {
     const hash = window.location.hash.slice(1); // Remove the # from the hash
@@ -76,10 +79,25 @@ function App() {
   }, [scrollToSkills, scrollToExperience, scrollToAbout, scrollToApplication, scrollToContent]);
 
   return (
-    <AppShell header={{height: 60}}>
+    <AppShell
+      header={{height: 60}}
+      navbar={{
+        width: "300",
+        breakpoint: 'sm',
+        collapsed: { mobile: !burgerOpened, desktop: true },
+      }}
+    >
       <AppShell.Header>
         <Container size="lg" h="100%">
-          <Group h="100%" justify="flex-end" gap="xl">
+          <Group h="100%" justify="flex-end" hiddenFrom="sm">
+            <Burger
+              opened={burgerOpened}
+              onClick={toggle}
+              size="sm"
+              aria-label="Toggle navigation"
+            />
+          </Group>
+          <Group h="100%" justify="flex-end" gap="xl" visibleFrom="sm" >
             <Anchor href="#skills" c="dark" onClick={() => scrollToSkills()}>
               Skills
             </Anchor>
@@ -95,6 +113,35 @@ function App() {
           </Group>
         </Container>
       </AppShell.Header>
+
+      <AppShell.Navbar p="lg" hiddenFrom="sm">
+        <Stack h="100%" align="flex-start" gap="md" >
+          <Anchor href="#skills" c="dark" onClick={() => {
+            toggle()
+            scrollToSkills()
+          }}>
+            Skills
+          </Anchor>
+          <Anchor href="#experience" c="dark" onClick={() => {
+            toggle()
+            scrollToExperience()
+          }}>
+            Experience
+          </Anchor>
+          <Anchor href="#about" c="dark" onClick={() => {
+            toggle()
+            scrollToAbout()
+          }}>
+            About Me
+          </Anchor>
+          <Anchor href="#application" c="dark" onClick={() => {
+            toggle()
+            scrollToApplication()
+          }}>
+            Application
+          </Anchor>
+        </Stack>
+      </AppShell.Navbar>
 
       <AppShell.Main>
 
