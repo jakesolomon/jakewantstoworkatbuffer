@@ -7,7 +7,7 @@ This website serves as both a delivery of my job application to Buffer and a dem
 - **React 19** with **TypeScript** for type-safe component development
 - **Mantine UI** for a consistent, themeable design system
 - **Vite** for fast development and optimized builds
-- **Vercel Analytics** for performance tracking
+- **Vercel Analytics** and **LogRocket** for performance tracking and session replay
 
 ## Code Highlights
 
@@ -21,6 +21,7 @@ Centralized design tokens in `theme.ts`:
 ### Responsive Design
 Mobile-first approach with Mantine's responsive utilities:
 - Grid layouts that adapt from mobile to desktop
+- Collapsible burger menu navigation for mobile devices
 - Conditional rendering for different viewport sizes
 - Touch-friendly navigation and interactions
 
